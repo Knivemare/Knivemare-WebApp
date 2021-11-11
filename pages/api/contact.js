@@ -2,10 +2,10 @@ export default function (req, res) {
 
     let nodemailer = require('nodemailer')
     const transporter = nodemailer.createTransport({
-        port: 465,
-        host: "smtp.strato.de",
+        port: process.env.MAILER_SMTP_SERVER_PORT,
+        host: process.env.MAILER_SMTP_SERVER,
         auth: {
-            user: 'philipp@jawny.de',
+            user: process.env.MAILER_FROM_MAIL,
             pass: process.env.MAILER_PASSWORD,
         },
         secure: true,
@@ -13,7 +13,7 @@ export default function (req, res) {
 
     const mailData = {
         from: req.body.email,
-        to: 'jawny.p@gmail.com',
+        to: process.env.MAILER_TO_MAIL,
         subject: `Kontaktformular Jawny.de - Neue Nachricht`,
         html: `
             <div>Neue Nachricht über das Kontaktformular auf Jawny.de</div>
