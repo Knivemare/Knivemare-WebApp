@@ -1,0 +1,94 @@
+// Import Modules & Components
+import { useState } from 'react'
+import PageMetaTags from 'components/PageMetaTags';
+import PageHeaderTextCenterSimple from 'components/PageHeaderTextCenter';
+import Button from 'components/Button';
+// Import Styles
+import styles from 'styles/pages/Contact.module.scss'
+
+export function ContactForm() {
+
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+    const [submitted, setSubmitted] = useState(false)
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log('Sending')
+
+        let data = {
+            name, email, message
+        }
+        fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json, text/plain, */*',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+          }).then((res) => {
+            console.log('Response received')
+            if (res.status === 200) {
+              console.log('Response succeeded!')
+              setSubmitted(true)
+              setName('')
+              setEmail('')
+              setMessage('')
+            }
+          })
+    }
+
+    return (
+        <form className={styles.FormContainer}>
+            <div className={styles.Box50}>
+                <lable for="name">Dein Name</lable>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name"
+                    placeholder="Max Mustermann"
+                    onChange={(e)=>{setName(e.target.value)}}
+                />
+            </div>
+            <div className={styles.Box50}>
+                <lable for="mail">Deine Mail-Adresse</lable>
+                <input
+                    type="email"
+                    id="mail" 
+                    name="mail"
+                    placeholder="max@mustermann.de"
+                    onChange={(e)=>{setEmail(e.target.value)}}
+                />
+            </div>
+            <div className={styles.Box100}>
+                <lable for="message">Deine Nachricht</lable>
+                <textarea 
+                    rows="5"
+                    id="message"
+                    name="message"
+                    placeholder="Was möchtest du uns sagen?"
+                    onChange={(e)=>{setMessage(e.target.value)}}
+                />
+            </div>
+            <button type='submit' onClick={(e)=>{handleSubmit(e)}}>
+                Senden
+            </button>
+        </form>
+    )
+}
+
+
+// Content
+export default function ContactPage() {
+    return (
+        <>
+            <PageMetaTags/>
+            <PageHeaderTextCenterSimple
+                Heading="Kontakt"
+                SubHeading="Unser Team hilft dir gerne weiter"
+            />
+            <ContactForm/>
+        </>
+    )
+}

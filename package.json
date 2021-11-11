@@ -1,0 +1,25 @@
+{
+  "name": "webapp-starter",
+  "version": "0.1.6",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 1202",
+    "build": "next build",
+    "start": "next start -p 1202",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@auth0/nextjs-auth0": "^1.6.1",
+    "next": "^11",
+    "next-optimized-classnames": "^1.0.2",
+    "nodemailer": "^6.7.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "sass": "^1.43.3",
+    "set-value": "^4.1.0"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2"
+  }
+}

@@ -1,0 +1,8 @@
+@import '../mixins/MediaQueries';
+
+.Block {
+    background: var(--ThemeColor);
+    display: block;
+    width: 100%;
+    color: #fff;
+}
