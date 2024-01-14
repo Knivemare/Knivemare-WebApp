@@ -2,8 +2,8 @@
 import Head from 'next/head'
 
 PageMetaTags.defaultProps = {
-    Title: "Jawny.de | Website",
-    Description: "Willkommen auf der Website Jawny.de",
+    Title: "Knivemare.de",
+    Description: "Willkommen auf meiner perönlichen Website, hier findest du meine Projekte und weitere Informationen.",
     Robots: "index, follow", 
     Canonical: "/" 
 }
@@ -23,14 +23,14 @@ export default function PageMetaTags(props) {
             <meta property="og:description" content={props.Description}/>
             <meta property="og:url" content={props.Canonical}/>
             <meta property="og:type" content="website"/>
-            <meta property="og:site_name" content="TechUpgrade.de"/>
-            <meta property="fb:app_id" content="469470689893966"/>
+            {/* <meta property="og:site_name" content="TechUpgrade.de"/>
+            <meta property="fb:app_id" content="469470689893966"/> */}
 
             {/* Twitter MetaTags */}
             <meta property="twitter:title" content={props.Title}/>
             <meta property="twitter:description" content={props.Description}/>
             <meta name="twitter:card" content="summary"/>
-            <meta name="twitter:site" content="@TechUpgrade_"/>
+            {/* <meta name="twitter:site" content="@TechUpgrade_"/> */}
         </Head>
     )
 }
