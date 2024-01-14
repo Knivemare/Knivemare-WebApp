@@ -42,7 +42,7 @@ export function ContactForm() {
     return (
         <form className={styles.FormContainer}>
             <div className={styles.Box50}>
-                <lable for="name">Dein Name</lable>
+                <lable htmlFor="name">Dein Name</lable>
                 <input 
                     type="text" 
                     id="name" 
@@ -52,7 +52,7 @@ export function ContactForm() {
                 />
             </div>
             <div className={styles.Box50}>
-                <lable for="mail">Deine Mail-Adresse</lable>
+                <lable htmlFor="mail">Deine Mail-Adresse</lable>
                 <input
                     type="email"
                     id="mail" 
@@ -62,7 +62,7 @@ export function ContactForm() {
                 />
             </div>
             <div className={styles.Box100}>
-                <lable for="message">Deine Nachricht</lable>
+                <lable htmlFor="message">Deine Nachricht</lable>
                 <textarea 
                     rows="5"
                     id="message"

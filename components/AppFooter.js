@@ -10,12 +10,12 @@ export default function AppFooter() {
         <footer className={styles.Footer}>
             <div className={styles.Legal}>
                 <Container>
-                    <Link href="/datenschutz">
-                        <a className={styles.Link}>Datenschutz</a>
+                    <Link href="/datenschutz" className={styles.Link}>
+                      Datenschutz
                     </Link>
 
-                    <Link href="/impressum">
-                        <a className={styles.Link}>Impressum</a>
+                    <Link href="/impressum" className={styles.Link}>
+                      Impressum
                     </Link>
                 </Container>
             </div>
