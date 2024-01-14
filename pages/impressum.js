@@ -11,7 +11,7 @@ export default function Imprint() {
             <Container>
                 <h1>Impressum 🧑🏽‍⚖️ 👩🏼‍⚖️</h1>
                 <p>
-                    Philipp Jawny <br/>
+                    PJ WebTech <br/>
                     Pilgerhausstraße 19 <br/>
                     86152 Ausgburg
                 </p>
