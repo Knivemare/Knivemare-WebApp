@@ -9,19 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.1.1",
-    "@vercel/speed-insights": "^1.0.3",
+    "@vercel/analytics": "^1",
+    "@vercel/speed-insights": "^1",
     "next": "^14",
-    "next-optimized-classnames": "^1.0.2",
+    "next-optimized-classnames": "^1",
     "nodemailer": "^6",
     "react": "^18",
     "react-dom": "^18",
     "sass": "^1",
-    "set-value": "^4.1.0"
+    "set-value": "^4"
   },
   "devDependencies": {
     "eslint": "^8",
     "eslint-config-next": "^14",
-    "prettier": "^3.2.2"
+    "prettier": "^3"
   }
 }
